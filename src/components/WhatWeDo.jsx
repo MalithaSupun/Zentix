@@ -1,6 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet"; // For dynamic metadata
+import { Helmet } from "react-helmet"; 
 import TeamImg from "../assets/Zentix Solution.jpg";
+import { Link } from "react-router-dom";
 
 function WhatWeDo() {
   return (
@@ -68,12 +69,12 @@ function WhatWeDo() {
               AI-driven insights, we transform your vision into reality.
             </p>
 
-            <a
-              href="/how-it-works"
-              className="mt-6 inline-flex items-center font-bold bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 text-transparent bg-clip-text"
-            >
-              How It Works →
-            </a>
+            <Link
+  to="/random-nonexistent-page"
+  className="mt-6 inline-flex items-center font-bold bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 text-transparent bg-clip-text"
+>
+  How It Works → 404 error
+</Link>
           </article>
         </div>
       </section>
