@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Bounds } from "@react-three/drei";
 import { motion } from "framer-motion";
@@ -10,20 +11,38 @@ import laptopModel from "../model/gaming_laptop.glb";
 function LaptopModel() {
   const gltf = useGLTF(laptopModel);
   const scene = Array.isArray(gltf) ? gltf[0].scene : gltf.scene;
-  return <primitive object={scene} scale={1.5} position={[0, -2, 0]} />;
+  return <primitive object={scene} scale={1.0} position={[0, -1, 0]} />;
 }
 
 function NavandHomeSec() {
-  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: false }); // Removed triggerOnce
+  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: false });
 
   return (
     <div id="home" className="relative w-full h-screen bg-cover bg-center">
+      {/* SEO Metadata */}
+      <Helmet>
+        <title>Zentix Solutions - Innovative Software & AI Development</title>
+        <meta name="description" content="Zentix Solutions provides cutting-edge software, full-stack development, AI-powered solutions, and UI/UX services." />
+        <meta name="keywords" content="Zentix Solutions, Software Development, AI, UI/UX, Full-stack Development, Cloud Computing" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://zentix.com/" />
+
+        {/* Open Graph for Social Sharing */}
+        <meta property="og:title" content="Zentix Solutions - Software & AI Experts" />
+        <meta property="og:description" content="Zentix Solutions crafts advanced technology solutions for startups and enterprises." />
+        <meta property="og:image" content="https://zentix.com/assets/zentix-preview.jpg" />
+        <meta property="og:url" content="https://zentix.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card for Better Social Media Display */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zentix Solutions - Software & AI Experts" />
+        <meta name="twitter:description" content="Building AI-powered software solutions for businesses worldwide." />
+        <meta name="twitter:image" content="https://zentix.com/assets/zentix-preview.jpg" />
+      </Helmet>
+
       {/* Background Image */}
-      <img
-        src={Bgimg}
-        alt="Background"
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      />
+      <img src={Bgimg} alt="Background" className="absolute top-0 left-0 w-full h-full object-cover" />
 
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-55">
         <NavBar />

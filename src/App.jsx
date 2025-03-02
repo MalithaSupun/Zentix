@@ -4,9 +4,11 @@ import ServicesSection from "./components/ServicesSection";
 import ContactSection from "./components/ContactSection";
 import WhatWeDo from "./components/WhatWeDo";
 import NotFound from "../src/components/NotFound";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   return (
+    <HelmetProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,6 +18,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
+    </HelmetProvider>
   );
 }
 
