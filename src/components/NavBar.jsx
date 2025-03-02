@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../assets/Zentix.png";
 
 function NavBar() {
           const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ function NavBar() {
       {/* Left Side - Logo */}
       <div className="text-white text-xl font-bold">
         <img
-          src="src/assets/Zentix.png"
+          src={logo}
           alt="Company Logo"
           className="h-10 w-auto"
         />

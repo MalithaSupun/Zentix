@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../assets/Zentix.png";
 
 function Footer() {
   return (
@@ -8,7 +9,7 @@ function Footer() {
         {/* Left Side - Company Info */}
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
-            <img src="src/assets/Zentix.png" alt="Zentix Logo" className="h-12 w-auto" />
+            <img src={logo} alt="Zentix Logo" className="h-12 w-auto" />
           </a>
           <p className="mt-2 text-sm text-gray-400">
             Delivering innovative software solutions with expertise in **AI, Web, and DevOps**.
