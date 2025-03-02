@@ -6,6 +6,7 @@ import ServicesSection from "../components/ServicesSection";
 import Footer from "../components/Footer";
 import ContactSection from "../components/ContactSection";
 import TeamSection from "../components/TeamSection";
+import CompletedProjects from "../components/CompletedProjects";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <HomeSection />
       <CompanyLogos />
       <WhatWeDo />
+      <CompletedProjects />
       <ServicesSection />
       <TeamSection />
       <ContactSection />

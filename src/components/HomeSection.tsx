@@ -13,7 +13,7 @@ function LaptopModel() {
 
 function NavandHomeSec() {
   return (
-    <div className="relative w-full h-screen bg-cover bg-center">
+    <div id="home" className="relative w-full h-screen bg-cover bg-center">
       {/* Background Image */}
       <img
         src={Bgimg}

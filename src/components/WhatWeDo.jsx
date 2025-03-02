@@ -3,7 +3,7 @@ import TeamImg from "../assets/Zentix Solution.jpg";
 
 function WhatWeDo() {
   return (
-    <section className="py-16 bg-white">
+    <section id="aboutus" className="py-16 bg-white">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 lg:px-20">
         {/* Left Side - Image */}
         <div className="md:w-1/2 mb-8 md:mb-0">
