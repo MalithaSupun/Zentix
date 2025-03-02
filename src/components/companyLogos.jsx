@@ -1,16 +1,25 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
+import Adobe from "../assets/Logos/Adobe.png";
+import Altron from "../assets/Logos/Altron.png";
+import Amazon from "../assets/Logos/Amazon.png";
+import Antatica from "../assets/Logos/Antatica.png";
+import Disney from "../assets/Logos/Disney.png";
+import Foursquare from "../assets/Logos/Foursquare-Logo.png";
+import Google from "../assets/Logos/Google.png";
+import Sanofi from "../assets/Logos/Sanofi.png";
+import Vans from "../assets/Logos/Vans.png";
 
 const companyLogos = [
-  { src: "src/assets/Logos/Adobe.png", alt: "Adobe" },
-  { src: "src/assets/Logos/Altron.png", alt: "Altron" },
-  { src: "src/assets/Logos/Amazon.png", alt: "Amazon" },
-  { src: "src/assets/Logos/Antatica.png", alt: "Antatica" },
-  { src: "src/assets/Logos/Disney.png", alt: "Disney" },
-  { src: "src/assets/Logos/Foursquare-Logo.png", alt: "Foursquare" },
-  { src: "src/assets/Logos/Google.png", alt: "Google" },
-  { src: "src/assets/Logos/Sanofi.png", alt: "Sanofi" },
-  { src: "src/assets/Logos/Vans.png", alt: "Vans" },
+  { src: Adobe, alt: "Adobe" },
+  { src: Altron, alt: "Altron" },
+  { src: Amazon, alt: "Amazon" },
+  { src: Antatica, alt: "Antatica" },
+  { src: Disney, alt: "Disney" },
+  { src: Foursquare, alt: "Foursquare" },
+  { src: Google, alt: "Google" },
+  { src: Sanofi, alt: "Sanofi" },
+  { src: Vans, alt: "Vans" },
 ];
 
 function CompanyLogos() {
