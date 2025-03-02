@@ -3,10 +3,12 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Bounds } from "@react-three/drei";
 import NavBar from "./NavBar";
 import Bgimg from "../assets/Bgimg3.jpg";
+import laptopModel from "../model/gaming_laptop.glb"; 
 
 function LaptopModel() {
-  // const { scene } = useGLTF("src/model/gaming_laptop.glb"); // Ensure correct path
-  // return <primitive object={scene} scale={1.5} position={[0, -2, 0]} />;
+  const gltf = useGLTF(laptopModel); // ✅ Use imported path
+  const scene = Array.isArray(gltf) ? gltf[0].scene : gltf.scene;
+  return <primitive object={scene} scale={1.5} position={[0, -2, 0]} />;
 }
 
 function NavandHomeSec() {
@@ -43,7 +45,7 @@ function NavandHomeSec() {
           </div>
 
           {/* Right Side - 3D Laptop Model */}
-          {/* <div className="w-full md:w-1/2 flex justify-center md:justify-end h-[500px] md:h-[600px] lg:h-[700px] relative z-10">
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end h-[500px] md:h-[600px] lg:h-[700px] relative z-10">
             <Canvas 
               camera={{ position: [0, 2, 15], fov: 50 }} 
               className="w-full h-full"
@@ -55,7 +57,7 @@ function NavandHomeSec() {
               </Bounds>
               <OrbitControls enableZoom={false} />
             </Canvas>
-          </div> */}
+          </div>
 
         </div>
       </div>
