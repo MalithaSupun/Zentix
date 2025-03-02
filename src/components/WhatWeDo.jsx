@@ -33,15 +33,15 @@ function WhatWeDo() {
 
           {/* Description */}
           <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-  With a presence in **Sweden and Sri Lanka**, our diverse tech experts collaborate 
-  seamlessly to engineer **next-gen software** that accelerates innovation and growth.  
+  With a presence in Sweden and Sri Lanka, our diverse tech experts collaborate 
+  seamlessly to engineer next-gen software that accelerates innovation and growth.  
   Whether it's full-stack development, cloud computing, or data-driven insights—Zentix 
   turns your vision into reality.
 </p>
 
           <a
             href="#"
-            className="mt-6 inline-flex items-center text-red-500 font-semibold hover:underline"
+            className="mt-6 inline-flex items-center font-bold bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 text-transparent bg-clip-text"
           >
             How it works →
           </a>

@@ -56,7 +56,9 @@ function TeamSection() {
         {/* Section Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Meet Our <span className="text-red-500">Zentix Team</span>
+            Meet Our <span className="bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 text-transparent bg-clip-text">
+  Zentix Team
+</span>
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             A passionate team of professionals dedicated to delivering innovative software solutions.

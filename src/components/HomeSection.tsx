@@ -42,7 +42,7 @@ function NavandHomeSec() {
       {/* Right Side - Image */}
       <div className="w-full md:w-1/2 flex justify-center md:justify-end">
         <img
-          src="src/assets/right side.png"
+          src=""
           alt="IT Professional"
           className="w-60 md:w-80 lg:w-full max-w-md rounded-lg opacity-90"
         />

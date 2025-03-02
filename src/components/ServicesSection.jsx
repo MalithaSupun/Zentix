@@ -60,7 +60,7 @@ function ServicesSection() {
               className="relative group bg-white p-8 rounded-xl shadow-lg overflow-hidden transition-all duration-500 border border-gray-200 hover:shadow-xl"
             >
               {/* Background hover effect - fills from bottom to top */}
-              <div className="absolute inset-0 bg-red-500 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 rounded-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 rounded-xl"></div>
 
               {/* Content Wrapper */}
               <div className="relative z-10 flex flex-col items-center text-gray-900 group-hover:text-white transition-all duration-300">
