@@ -1,54 +1,83 @@
 import React from "react";
+import { Helmet } from "react-helmet"; // For dynamic metadata
 import TeamImg from "../assets/Zentix Solution.jpg";
 
 function WhatWeDo() {
   return (
-    <section id="aboutus" className="py-16 bg-white">
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 lg:px-20">
-        {/* Left Side - Image */}
-        <div className="md:w-1/2 mb-8 md:mb-0">
-          <img
-            src={TeamImg} // Replace with your actual image path
-            alt="Team Collaboration"
-            className="w-full rounded-lg shadow-lg"
-          />
-        </div>
+    <>
+      {/* SEO Meta Tags */}
+      <Helmet>
+        <title>Zentix - Innovative Software Solutions | Sweden & Sri Lanka</title>
+        <meta
+          name="description"
+          content="Zentix is a tech-driven company with experts from Sweden and Sri Lanka, building next-gen software solutions. Explore our full-stack development, cloud computing, and data-driven insights."
+        />
+        <meta name="keywords" content="Zentix, software development, cloud computing, full-stack, AI solutions" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://zentix.com/about-us" />
 
-        {/* Right Side - Text Content */}
-        <div className="md:w-1/2 md:pl-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-          Zentix?
-          </h2>
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-          {/* Key Stats */}
-          <div className="flex items-center space-x-6 mt-4">
-            <div>
-              <p className="text-4xl font-bold text-red-500">30+</p>
-              <p className="text-gray-600 text-sm">Employees</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold text-red-500">3</p>
-              <p className="text-gray-600 text-sm">Avg. years of experience</p>
-            </div>
+        {/* Open Graph (Facebook, LinkedIn) */}
+        <meta property="og:title" content="Zentix - Innovative Software Solutions" />
+        <meta property="og:description" content="Discover cutting-edge software solutions by Zentix, with expertise in AI, cloud computing, and full-stack development." />
+        <meta property="og:image" content="https://zentix.com/assets/zentix-preview.jpg" />
+        <meta property="og:url" content="https://zentix.com/about-us" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card (X) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zentix - Innovative Software Solutions" />
+        <meta name="twitter:description" content="AI-powered software solutions from Zentix, empowering businesses in Sweden & Sri Lanka." />
+        <meta name="twitter:image" content="https://zentix.com/assets/zentix-preview.jpg" />
+      </Helmet>
+
+      <section id="aboutus" className="py-16 bg-white">
+        <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 lg:px-20">
+          {/* Left Side - Image */}
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <img
+              src={TeamImg}
+              alt="Zentix software development team collaboration"
+              className="w-full rounded-lg shadow-lg"
+              loading="lazy"
+            />
           </div>
 
-          {/* Description */}
-          <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-  With a presence in Sweden and Sri Lanka, our diverse tech experts collaborate 
-  seamlessly to engineer next-gen software that accelerates innovation and growth.  
-  Whether it's full-stack development, cloud computing, or data-driven insights—Zentix 
-  turns your vision into reality.
-</p>
+          {/* Right Side - Text Content */}
+          <article className="md:w-1/2 md:pl-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Why Zentix?</h2>
 
-          <a
-            href="#"
-            className="mt-6 inline-flex items-center font-bold bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 text-transparent bg-clip-text"
-          >
-            How it works →
-          </a>
+            {/* Key Stats */}
+            <div className="flex items-center space-x-6 mt-4">
+              <div>
+                <p className="text-4xl font-bold text-red-500">30+</p>
+                <p className="text-gray-600 text-sm">Experienced Employees</p>
+              </div>
+              <div>
+                <p className="text-4xl font-bold text-red-500">3</p>
+                <p className="text-gray-600 text-sm">Avg. Years of Experience</p>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+              Based in Sweden and Sri Lanka, Zentix unites a global team of tech experts to deliver 
+              cutting-edge software solutions. From full-stack development and cloud computing to 
+              AI-driven insights, we transform your vision into reality.
+            </p>
+
+            <a
+              href="/how-it-works"
+              className="mt-6 inline-flex items-center font-bold bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 text-transparent bg-clip-text"
+            >
+              How It Works →
+            </a>
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
 
