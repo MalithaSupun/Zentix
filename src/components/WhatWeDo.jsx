@@ -1,4 +1,5 @@
 import React from "react";
+import TeamImg from "../assets/Zentix Solution.jpg";
 
 function WhatWeDo() {
   return (
@@ -7,7 +8,7 @@ function WhatWeDo() {
         {/* Left Side - Image */}
         <div className="md:w-1/2 mb-8 md:mb-0">
           <img
-            src="src/assets/Zentix Solution.jpg" // Replace with your actual image path
+            src={TeamImg} // Replace with your actual image path
             alt="Team Collaboration"
             className="w-full rounded-lg shadow-lg"
           />
