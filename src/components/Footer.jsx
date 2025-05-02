@@ -56,9 +56,18 @@ function Footer() {
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CONTACT</h2>
             <nav className="list-none mb-10">
-              <li><a className="text-gray-400 hover:text-red-400">info@zentix.com</a></li>
-              <li><a className="text-gray-400 hover:text-red-400">+1 234 567 890</a></li>
-              <li><a className="text-gray-400 hover:text-red-400">LinkedIn</a></li>
+              <li><a className="text-gray-400 hover:text-red-400">zentixsolutions.info@gmail.com</a></li>
+              <li><a className="text-gray-400 hover:text-red-400">+94 77 273 5361</a></li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/zentix-solutions-b99710361/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-red-400"
+                >
+                  LinkedIn
+                </a>
+              </li>
               <li><a className="text-gray-400 hover:text-red-400">Twitter</a></li>
             </nav>
           </div>
@@ -75,7 +84,7 @@ function Footer() {
           
           {/* Social Media Links */}
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            <a className="text-gray-400 hover:text-red-400">
+            <a href="https://www.facebook.com/profile.php?id=61575656428767" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400">
               <svg fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
                 <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
               </svg>

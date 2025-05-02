@@ -30,7 +30,7 @@ function CompletedProjects() {
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-red-500 w-12 h-12 mb-3 inline-block group-hover:text-white transition duration-300" viewBox="0 0 24 24">
                   <path d="M3 3h18M3 8h18M3 13h18M3 18h18"></path>
                 </svg>
-                <h2 className="title-font font-medium text-3xl">120+</h2>
+                <h2 className="title-font font-medium text-3xl">55+</h2>
                 <p className="leading-relaxed">Websites</p>
               </div>
             </div>
@@ -44,7 +44,7 @@ function CompletedProjects() {
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-red-500 w-12 h-12 mb-3 inline-block group-hover:text-white transition duration-300" viewBox="0 0 24 24">
                   <path d="M7 3h10M5 7h14M5 11h14M5 15h14M7 19h10"></path>
                 </svg>
-                <h2 className="title-font font-medium text-3xl">85+</h2>
+                <h2 className="title-font font-medium text-3xl">25+</h2>
                 <p className="leading-relaxed">Mobile Apps</p>
               </div>
             </div>
@@ -58,7 +58,7 @@ function CompletedProjects() {
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-red-500 w-12 h-12 mb-3 inline-block group-hover:text-white transition duration-300" viewBox="0 0 24 24">
                   <path d="M4 4h16M4 9h16M4 15h16M4 20h16"></path>
                 </svg>
-                <h2 className="title-font font-medium text-3xl">45+</h2>
+                <h2 className="title-font font-medium text-3xl">15+</h2>
                 <p className="leading-relaxed">Enterprise Solutions</p>
               </div>
             </div>
@@ -72,7 +72,7 @@ function CompletedProjects() {
                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-red-500 w-12 h-12 mb-3 inline-block group-hover:text-white transition duration-300" viewBox="0 0 24 24">
                   <path d="M12 2a10 10 0 100 20 10 10 0 000-20zM9 12h6"></path>
                 </svg>
-                <h2 className="title-font font-medium text-3xl">30+</h2>
+                <h2 className="title-font font-medium text-3xl">12+</h2>
                 <p className="leading-relaxed">AI & ML Models</p>
               </div>
             </div>

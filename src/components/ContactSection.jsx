@@ -1,6 +1,46 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ContactSection() {
+  const formRef = useRef(null);
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setSubmitting(true);
+
+    const formData = new FormData(formRef.current);
+    formData.append("access_key", "74756c31-baed-4396-9c6c-c20baee4b4d5");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Message sent successfully!");
+        formRef.current.reset();
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section id="contactus" className="text-gray-600 body-font relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -26,23 +66,27 @@ function ContactSection() {
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 ADDRESS
               </h2>
-              <p className="mt-1">123 Innovation Street, Colombo, Sri Lanka</p>
+              <p className="mt-1">Colombo, Sri Lanka</p>
             </div>
-            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+            <div className="lg:w-3/5 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                 EMAIL
               </h2>
-              <a className="text-red-500 leading-relaxed">contact@zentix.com</a>
+              <a className="text-red-500 leading-relaxed">zentixsolutions.info@gmail.com</a>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                 PHONE
               </h2>
-              <p className="leading-relaxed">+94 123 456 789</p>
+              <p className="leading-relaxed">+94 77 273 5361</p>
             </div>
           </div>
         </div>
 
         {/* Right Side - Contact Form */}
-        <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6 rounded-lg shadow-lg">
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 p-6 rounded-lg shadow-lg"
+        >
           <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
             Send Us a Message
           </h2>
@@ -58,6 +102,7 @@ function ContactSection() {
               type="text"
               id="name"
               name="name"
+              required
               className="w-full bg-gray-100 rounded border border-gray-300 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-base outline-none text-gray-700 py-2 px-3 transition duration-200 ease-in-out"
             />
           </div>
@@ -70,33 +115,33 @@ function ContactSection() {
               type="email"
               id="email"
               name="email"
+              required
               className="w-full bg-gray-100 rounded border border-gray-300 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 text-base outline-none text-gray-700 py-2 px-3 transition duration-200 ease-in-out"
-/>
+            />
           </div>
 
           <div className="relative mb-4">
-            <label
-              htmlFor="message"
-              className="leading-7 text-sm text-gray-600"
-            >
+            <label htmlFor="message" className="leading-7 text-sm text-gray-600">
               Message
             </label>
             <textarea
               id="message"
               name="message"
+              required
               className="w-full bg-gray-100 rounded border border-gray-300 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 h-32 text-base outline-none text-gray-700 py-2 px-3 resize-none transition duration-200 ease-in-out"
             ></textarea>
           </div>
 
-          <button className="text-white bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 border-0 py-2 px-6 focus:outline-none transition-all duration-300 rounded text-lg hover:opacity-90">
-            Send Message
+          <button
+            type="submit"
+            disabled={submitting}
+            className="text-white bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 border-0 py-2 px-6 focus:outline-none transition-all duration-300 rounded text-lg hover:opacity-90 disabled:opacity-60"
+          >
+            {submitting ? "Sending..." : "Send Message"}
           </button>
-
-          <p className="text-xs text-gray-500 mt-3">
-            Your information is safe with us. We respect your privacy.
-          </p>
-        </div>
+        </form>
       </div>
+      <ToastContainer position="top-right" autoClose={3000} />
     </section>
   );
 }

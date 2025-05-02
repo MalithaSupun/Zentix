@@ -1,50 +1,46 @@
 import React from "react";
+import user from "../assets/image.png"
 
 const teamMembers = [
     {
-      name: "John Smith",
-      role: "CEO & Founder",
-      image: "https://i.pravatar.cc/80?img=1",
-    },
-    {
-      name: "Emily Johnson",
-      role: "CTO",
-      image: "https://i.pravatar.cc/84?img=2",
-    },
-    {
-      name: "Michael Brown",
+      name: "Denuwan Chamika",
       role: "Lead Developer",
-      image: "https://i.pravatar.cc/88?img=3",
+      image: user,
     },
     {
-      name: "Sarah Wilson",
+      name: "Nuwan Perera",
       role: "UI/UX Designer",
-      image: "https://i.pravatar.cc/90?img=4",
+      image: user,
     },
     {
-      name: "David Lee",
+      name: "Brayan",
       role: "DevOps Engineer",
-      image: "https://i.pravatar.cc/94?img=5",
+      image: user,
     },
     {
-      name: "Sophia Martinez",
+      name: "Harshitha",
       role: "Software Engineer",
-      image: "https://i.pravatar.cc/98?img=6",
+      image: user,
     },
-    {
-      name: "James Anderson",
+   {
+      name: "Nisansala",
       role: "QA Engineer",
-      image: "https://i.pravatar.cc/100?img=7",
+      image: user,
     },
     {
-      name: "Olivia Taylor",
-      role: "System Analyst",
-      image: "https://i.pravatar.cc/104?img=8",
+      name: "Chamidu",
+      role: "Intern Full Stack Developer",
+      image: user,
     },
     {
-      name: "Daniel White",
-      role: "Product Manager",
-      image: "https://i.pravatar.cc/108?img=9",
+      name: "Nevidu",
+      role: "Intern Mobile Developer",
+      image: user,
+    },
+    {
+      name: "Kevin",
+      role: "Junior Developer",
+      image: user,
     },
   ];
 

@@ -53,27 +53,25 @@ function WhatWeDo() {
             {/* Key Stats */}
             <div className="flex items-center space-x-6 mt-4">
               <div>
-                <p className="text-4xl font-bold text-red-500">30+</p>
+                <p className="text-4xl font-bold text-red-500">5+</p>
                 <p className="text-gray-600 text-sm">Experienced Employees</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-red-500">3</p>
+                <p className="text-4xl font-bold text-red-500">2</p>
                 <p className="text-gray-600 text-sm">Avg. Years of Experience</p>
               </div>
             </div>
 
             {/* Description */}
             <p className="mt-4 text-lg text-gray-700 leading-relaxed">
-              Based in Sweden and Sri Lanka, Zentix unites a global team of tech experts to deliver 
-              cutting-edge software solutions. From full-stack development and cloud computing to 
-              AI-driven insights, we transform your vision into reality.
+              Zentix is one of Sri Lanka's top startup companies, uniting a global team of technology innovators. We specialize in full-stack development, cloud-native solutions, and AI-powered systems that help businesses thrive in a digital-first world.
             </p>
 
             <Link
   to="/random-nonexistent-page"
   className="mt-6 inline-flex items-center font-bold bg-gradient-to-r from-blue-500 via-purple-600 to-cyan-500 text-transparent bg-clip-text"
 >
-  How It Works → 404 error
+  How It Works 
 </Link>
           </article>
         </div>
